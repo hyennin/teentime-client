@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teentime/screens/login.dart';
+import 'package:teentime/screens/posting.dart';
 import 'package:teentime/screens/sign_up.dart';
 import 'package:teentime/screens/club_tab.dart';
 import 'package:teentime/screens/bottom_navigation.dart';
@@ -11,11 +12,13 @@ class Routes {
   static const String signup = '/signup';
   static const String home = '/home';
   static const String clubTab = '/clubtab';
+  static const String posting = '/posting';
 
   static final routes = <String, WidgetBuilder>{
     login: (BuildContext context) => Login(),
     signup: (BuildContext context) => SignUp(),
     home: (BuildContext context) => BottomNavigator(),
-    clubTab:(BuildContext context) => ClubTab(),
+    clubTab: (BuildContext context) => ClubTab(),
+    posting: (BuildContext context) => Posting(),
   };
 }
