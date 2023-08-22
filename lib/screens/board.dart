@@ -55,7 +55,7 @@ class _BoardState extends State<Board> {
           ),
           const SizedBox(height: 8),
           Container(
-            height: 100,
+            height: 100.h,
             padding: const EdgeInsets.only(left: 16),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,

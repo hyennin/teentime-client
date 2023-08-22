@@ -21,7 +21,7 @@ class _JoinModalState extends State<JoinModal> {
         child: Form(
           child: Container(
             width: 328.w,
-            height: 389,
+            height: 420,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               color: AppColors.dark01,

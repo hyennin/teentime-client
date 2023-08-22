@@ -56,7 +56,7 @@ class _ClubState extends State<Club> {
               },
             ),
             SizedBox(
-              height: 132,
+              height: 132.h,
               child:
                   isClubTabSelected ? const MyClubTab() : const Text('내 채팅방 탭'),
             ),

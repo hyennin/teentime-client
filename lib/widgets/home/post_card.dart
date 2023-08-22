@@ -13,7 +13,7 @@ class __PostCardState extends State<PostCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 328.w,
-      height: 179,
+      height: 179.h,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
       decoration: BoxDecoration(
         color: AppColors.dark01, // 배경색을 지정해야 그림자와 경계가 분명해집니다.

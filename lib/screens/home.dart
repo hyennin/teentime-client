@@ -57,7 +57,7 @@ class __HomeState extends State<Home> {
               ),
               const SizedBox(height: 8),
               SizedBox(
-                height: 244,
+                height: 244.h,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,

@@ -33,13 +33,13 @@ class MyClubTab extends StatelessWidget {
                   const SizedBox(height: 8),
                   SizedBox(
                     width: 70.w,
-                    child: Text(
+                    child: const Text(
                       '동아리 이름',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
-                        fontSize: 15.sp,
+                        fontSize: 15,
                         color: AppColors.dark08,
                       ),
                     ),

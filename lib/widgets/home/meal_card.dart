@@ -35,8 +35,8 @@ class __MealCardState extends State<MealCard> {
               ),
               SvgPicture.asset(
                 'assets/icons/filled_star.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
               const Text(
                 '3.1',

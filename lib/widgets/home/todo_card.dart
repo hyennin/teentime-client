@@ -37,9 +37,9 @@ class __TodoCardState extends State<TodoCard> {
                 borderRadius: BorderRadius.circular(4),
               ),
               child: _isCompleted
-                  ? Icon(
+                  ? const Icon(
                       Icons.check,
-                      size: 16.sp,
+                      size: 16,
                       color: AppColors.dark11,
                     )
                   : null,
@@ -54,7 +54,7 @@ class __TodoCardState extends State<TodoCard> {
                 Text(
                   '할 일',
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.normal,
                     color: _isCompleted ? AppColors.dark04 : AppColors.dark10,
                     decoration: _isCompleted

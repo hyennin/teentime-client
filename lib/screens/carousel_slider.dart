@@ -60,7 +60,7 @@ class _ImageSliderState extends State<ImageSlider> {
                             width: 67.w,
                             height: 35.h,
                             right: 0.w,
-                            bottom: 39.h,
+                            bottom: 32.h,
                             child: Container(
                                 decoration: BoxDecoration(
                                   color: AppColors.dark10.withOpacity(0.5),
