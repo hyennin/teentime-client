@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
-import 'package:teentime/widgets/club/board_selector.dart';
 
 class NoticeCard extends StatefulWidget {
   @override
