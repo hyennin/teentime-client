@@ -36,8 +36,8 @@ class _PostingState extends State<Posting> {
             Text(
               "글쓰기",
               style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w500,
+                fontSize: 15,
+                fontWeight: FontWeight.normal,
                 color: AppColors.dark11,
               ),
             ),
@@ -68,134 +68,75 @@ class _PostingState extends State<Posting> {
           ),
         ],
       ),
-      body: Container(
-        height: 800.h,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-          child: Column(
+      body: Stack(
+        children: [
+          ListView(
             children: [
-              Container(
-                height: 48,
-                decoration: BoxDecoration(
-                  color: AppColors.dark12,
-                  borderRadius: BorderRadius.circular(4),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                child: Container(
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: AppColors.dark12,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 644.h,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Form(
-                  child: Stack(
+                  child: Column(
                     children: [
-                      Column(
-                        children: [
-                          TextFormField(
-                            keyboardType: TextInputType.text,
-                            style: const TextStyle(
-                                color: AppColors.dark11), // 텍스트 색상 설정
-                            obscureText: false,
-                            controller: _titleController,
-                            decoration: const InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: AppColors.dark02), // 원하는 색상으로 변경
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: AppColors.dark02), // 원하는 색상으로 변경
-                              ),
-                              hintText: '제목',
-                              hintStyle: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.dark05,
-                              ),
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 12),
-                            ),
-                            cursorColor: AppColors.dark11,
+                      TextFormField(
+                        keyboardType: TextInputType.text,
+                        style: const TextStyle(
+                            color: AppColors.dark11), // 텍스트 색상 설정
+                        obscureText: false,
+                        controller: _titleController,
+                        decoration: const InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: AppColors.dark02), // 원하는 색상으로 변경
                           ),
-                          TextFormField(
-                            keyboardType: TextInputType.multiline,
-                            style: const TextStyle(
-                                color: AppColors.dark12), // 텍스트 색상 설정
-                            obscureText: false,
-                            controller: _contentController,
-                            decoration: const InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.transparent), // 원하는 색상으로 변경
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.transparent), // 원하는 색상으로 변경
-                              ),
-                              hintText: '내용을 입력해주세요',
-                              hintStyle: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                                color: AppColors.dark03,
-                              ),
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 16),
-                            ),
-                            cursorColor: AppColors.dark11,
-                            maxLines: null,
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: AppColors.dark02), // 원하는 색상으로 변경
                           ),
-                        ],
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        child: SizedBox(
-                          width: 336.w,
-                          height: 56,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        'assets/icons/img_btn.svg',
-                                        width: 24,
-                                        height: 24),
-                                  ),
-                                  const SizedBox(width: 16),
-                                  InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        'assets/icons/vote_btn.svg',
-                                        width: 24,
-                                        height: 24),
-                                  ),
-                                  const SizedBox(width: 16),
-                                  InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        'assets/icons/calendar_btn.svg',
-                                        width: 24,
-                                        height: 24),
-                                  ),
-                                  const SizedBox(width: 16),
-                                  InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        'assets/icons/link_btn.svg',
-                                        width: 24,
-                                        height: 24),
-                                  ),
-                                ],
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: SvgPicture.asset(
-                                    'assets/icons/setting_btn.svg',
-                                    width: 24,
-                                    height: 24),
-                              ),
-                            ],
+                          hintText: '제목',
+                          hintStyle: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.dark05,
                           ),
+                          contentPadding: EdgeInsets.symmetric(vertical: 12),
                         ),
+                        cursorColor: AppColors.dark11,
+                      ),
+                      TextFormField(
+                        keyboardType: TextInputType.multiline,
+                        style: const TextStyle(
+                            color: AppColors.dark12), // 텍스트 색상 설정
+                        obscureText: false,
+                        controller: _contentController,
+                        decoration: const InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.transparent), // 원하는 색상으로 변경
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.transparent), // 원하는 색상으로 변경
+                          ),
+                          hintText: '내용을 입력해주세요',
+                          hintStyle: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: AppColors.dark03,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(vertical: 16),
+                        ),
+                        cursorColor: AppColors.dark11,
+                        maxLines: null,
                       ),
                     ],
                   ),
@@ -203,7 +144,51 @@ class _PostingState extends State<Posting> {
               ),
             ],
           ),
-        ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: 328.w,
+              height: 56,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: SvgPicture.asset('assets/icons/img_btn.svg',
+                            width: 24, height: 24),
+                      ),
+                      const SizedBox(width: 16),
+                      InkWell(
+                        onTap: () {},
+                        child: SvgPicture.asset('assets/icons/vote_btn.svg',
+                            width: 24, height: 24),
+                      ),
+                      const SizedBox(width: 16),
+                      InkWell(
+                        onTap: () {},
+                        child: SvgPicture.asset('assets/icons/calendar_btn.svg',
+                            width: 24, height: 24),
+                      ),
+                      const SizedBox(width: 16),
+                      InkWell(
+                        onTap: () {},
+                        child: SvgPicture.asset('assets/icons/link_btn.svg',
+                            width: 24, height: 24),
+                      ),
+                    ],
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: SvgPicture.asset('assets/icons/setting_btn.svg',
+                        width: 24, height: 24),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
